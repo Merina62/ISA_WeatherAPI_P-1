@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="search">
+      <input type="text" class="search-bar" placeholder="Search">
+      <button>
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    <div class="weather-loading">
+      <h2 class="city">Weather in Basingstoke</h2>
+      <h1 class="temp">15°C</h1>
+      <div class="flex">
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <div class="description">Cloudy</div>
+      </div>
+      <div class="humidity">Humidity: 50%</div>
+      <div class="pressure">Pressure: 1012 hPa</div>
+      <div class="wind">Wind speed: 4.5 km/h</div>
+      <div id="datetime">Monday, May 5, 2023</div>
+    </div>
+  </div>
+
+  <style>
+    body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    background: #222;
+    background-image: url('https://source.unsplash.com/1600x900/?nature');
+    font-size: 120%;
+  }
+
+  .card{
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+
+  .search{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+  button{
+    margin: 0.5em;
+    border-radius: 50%;
+    border:none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  button:hover{
+    background: #7c7c7c2b;
+  }
+
+  input.search-bar{
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100%-100px)
+
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+
+  h1.temp{
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+
+  .description{
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+
+  .weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top:0;
+    left:20px;
+  }
+  </style>
+  <script src="MerinaShrestha_2333309.js"></script>
+</body>
+
+</html>
